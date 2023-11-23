@@ -38,7 +38,7 @@ class Mulit_head_attention(nn.Module):
 
         output = self.attention(queries,keys,values,valid_lens)
 
-        return self.transpose_output(self.weight_o(output))
+        return self.transpose_output(output)
 
 
     def attention(self,q,k,v,valid_lens):
